@@ -1,6 +1,8 @@
 import { Component } from "react";
 import { View } from "@tarojs/components";
 import "./index.scss";
+import FightIndex from "../flight/index";
+import NoExploit from "../../components/NoExploit";
 
 const DEFAULT_TAB_LIST = [
   {
@@ -60,9 +62,9 @@ export default class Index extends Component {
           <View className="scrollbar" style={innerStyle}></View>
         </View>
         {DEFAULT_TAB_LIST[tabIndex]["tab"] === "flight" ? (
-          <View className="content">flight</View>
+          <FightIndex />
         ) : (
-          <View className="content">组件</View>
+          <NoExploit />
         )}
       </View>
     );
